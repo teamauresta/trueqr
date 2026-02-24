@@ -120,7 +120,7 @@ export function QRDownload({ state, dataURL }: Props) {
         </span>
       </div>
 
-      {/* Coffee — shown after QR is generated, only if supportUrl is configured */}
+      {/* Support link — only shown if supportUrl is configured */}
       {!disabled && SITE_CONFIG.supportUrl && (
         <a
           href={SITE_CONFIG.supportUrl}
@@ -140,12 +140,12 @@ export function QRDownload({ state, dataURL }: Props) {
             ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.05)'
           }}
         >
-          <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-150 flex-shrink-0">☕</span>
+          <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-150 flex-shrink-0">♥</span>
           <div className="flex-1 min-w-0">
             <p className="text-[12px] font-medium text-apple-secondary group-hover:text-teal-700 transition-colors duration-150">
-              Enjoying TrueQR?
+              Finding this useful?
             </p>
-            <p className="text-[11px] text-apple-tertiary">Buy us a coffee — only if you want to</p>
+            <p className="text-[11px] text-apple-tertiary">Support the project — entirely optional</p>
           </div>
           <span className="text-[11px] text-apple-tertiary group-hover:text-teal-600 transition-colors duration-150 flex-shrink-0">→</span>
         </a>

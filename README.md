@@ -63,7 +63,7 @@ All variables are optional. See [`.env.example`](.env.example) for details.
 |---|---|---|
 | `NEXT_PUBLIC_OPERATOR_NAME` | `TrueQR` | Your deployment name |
 | `NEXT_PUBLIC_SITE_URL` | `https://trueqr.app` | Your public URL |
-| `NEXT_PUBLIC_SUPPORT_URL` | _(empty)_ | Stripe / Buy Me a Coffee link — hides button if empty |
+| `NEXT_PUBLIC_SUPPORT_URL` | _(empty)_ | Optional support/donation URL — hides the button entirely if empty |
 | `NEXT_PUBLIC_COMMUNITY_URL` | _(empty)_ | Discord / community link — falls back to GitHub if empty |
 
 ### Deploy to Netlify
@@ -118,4 +118,4 @@ PRs and issues welcome. Please:
 
 ---
 
-*Built with ❤️ in Australia.*
+*Built with ❤️ in Australia. Free forever.*

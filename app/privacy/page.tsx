@@ -63,7 +63,7 @@ export default function PrivacyPage() {
             {SITE_CONFIG.supportUrl && (
               <li className="flex gap-2">
                 <span className="text-slate-400 mt-0.5">→</span>
-                <span><strong>Stripe:</strong> Processes optional donations. If you choose to donate, Stripe handles your payment data. {SITE_CONFIG.name} never receives your payment details. See <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-teal-600 underline underline-offset-2">Stripe&apos;s Privacy Policy</a>.</span>
+                <span><strong>Payment processor:</strong> If you choose to make an optional donation, your payment is handled by a third-party payment processor. {SITE_CONFIG.name} never receives your payment details.</span>
               </li>
             )}
           </ul>

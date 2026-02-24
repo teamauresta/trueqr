@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://trueqr.app',
 
   /**
-   * Optional: URL for a "support / buy me a coffee" link.
+   * Optional: URL for a support or donation link.
    * Leave empty to hide the support button entirely.
    */
   supportUrl: process.env.NEXT_PUBLIC_SUPPORT_URL || '',

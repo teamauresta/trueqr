@@ -63,9 +63,9 @@ export default function TermsPage() {
             <section>
               <h2 className="text-base font-semibold text-slate-900 mb-2">Optional donations</h2>
               <p className="leading-relaxed">
-                Coffee donations via Stripe are entirely voluntary. They are not purchases of goods
-                or services, carry no refund obligation, and do not entitle you to any additional
-                features or support. We appreciate every coffee.
+                Any donations made via this site are entirely voluntary. They are not purchases of
+                goods or services, carry no refund obligation, and do not entitle you to any
+                additional features or support.
               </p>
             </section>
             <div className="h-px bg-black/[0.05]" />
