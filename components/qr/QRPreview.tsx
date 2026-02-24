@@ -64,13 +64,13 @@ export function QRPreview({ state, onDataURL }: Props) {
           />
         ) : (
           <div className="flex flex-col items-center gap-4 px-8 text-center">
-            {/* Placeholder pattern */}
+            {/* Placeholder pattern — deterministic so SSR matches client */}
             <div className="grid grid-cols-5 gap-1 opacity-10">
-              {Array.from({ length: 25 }).map((_, i) => (
+              {[1,0,1,1,0, 0,1,0,1,1, 1,1,0,0,1, 0,1,1,0,1, 1,0,1,1,0].map((on, i) => (
                 <div
                   key={i}
                   className="w-8 h-8 rounded-sm bg-apple-black"
-                  style={{ opacity: Math.random() > 0.5 ? 1 : 0 }}
+                  style={{ opacity: on }}
                 />
               ))}
             </div>

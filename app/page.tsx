@@ -76,79 +76,109 @@ const appSchema = {
 
 export default function HomePage() {
   return (
-    <div className="relative">
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
 
-      {/* Very subtle ambient glow — restrained, not garish */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full opacity-30"
-          style={{
-            background: 'radial-gradient(ellipse, rgba(13,148,136,0.12) 0%, transparent 65%)',
-            filter: 'blur(80px)',
-          }}
-        />
-      </div>
+      {/* ── HERO ── clean white, confident, high contrast */}
+      <div className="bg-white border-b border-black/[0.06]">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8 pt-14 pb-16">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-      <div className="relative mx-auto max-w-5xl px-5 sm:px-8 pt-16 pb-24">
+            {/* ── Text side ── */}
+            <div className="flex-1 text-center lg:text-left">
 
-        {/* Hero — Apple-style: large, confident, tight */}
-        <div className="text-center mb-16">
-
-          {/* Pill badge */}
-          <div className="inline-flex items-center gap-1.5 mb-6 px-3 py-1 rounded-full bg-teal-50 border border-teal-100">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-teal-500" />
-            <span className="text-xs font-medium text-teal-700 tracking-wide">
-              Free · No Signup · No Deactivation
-            </span>
-          </div>
-
-          <h1
-            className="text-[42px] sm:text-[56px] md:text-[64px] font-bold text-apple-black leading-[1.05] mb-5"
-            style={{ letterSpacing: '-0.035em' }}
-          >
-            QR codes that
-            <br />
-            <span
-              className="inline-block"
-              style={{
-                background: 'linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              never trick you.
-            </span>
-          </h1>
-
-          <p
-            className="text-[17px] sm:text-[19px] text-apple-secondary max-w-xl mx-auto leading-relaxed"
-            style={{ letterSpacing: '-0.01em' }}
-          >
-            Generate beautiful, permanent QR codes — free forever.
-            No hidden subscriptions. No codes that die after a trial.
-          </p>
-
-          {/* Trust row */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {[
-              { icon: '✓', text: 'No account required' },
-              { icon: '✓', text: 'Static codes never expire' },
-              { icon: '✓', text: 'PNG · SVG · JPG export' },
-              { icon: '✓', text: 'Made in Australia 🇦🇺' },
-            ].map(({ icon, text }) => (
-              <div key={text} className="flex items-center gap-1.5 text-sm text-apple-secondary">
-                <span className="text-teal-500 font-semibold text-xs">{icon}</span>
-                {text}
+              {/* Badge */}
+              <div
+                className="inline-flex items-center gap-1.5 mb-5 px-3 py-1 rounded-full bg-teal-50 border border-teal-100"
+                style={{ animation: 'fadeSlideUp 0.45s ease both' }}
+              >
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-teal-500" />
+                <span className="text-xs font-semibold text-teal-700 tracking-wide">
+                  Free · No Signup · No Deactivation
+                </span>
               </div>
-            ))}
+
+              {/* Headline */}
+              <h1
+                className="text-[40px] sm:text-[54px] md:text-[62px] font-bold leading-[1.04] mb-5"
+                style={{ letterSpacing: '-0.035em', color: '#111827', animation: 'fadeSlideUp 0.5s 0.07s ease both' }}
+              >
+                QR codes that
+                <br />
+                <span className="text-teal-700">never trick you.</span>
+              </h1>
+
+              {/* Body */}
+              <p
+                className="text-[17px] sm:text-[19px] leading-relaxed mb-8 max-w-md"
+                style={{ color: '#374151', animation: 'fadeSlideUp 0.5s 0.14s ease both' }}
+              >
+                Permanent static QR codes — free forever. No subscriptions.
+                No codes that die when you stop paying.
+              </p>
+
+              {/* Trust signals */}
+              <div
+                className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2.5"
+                style={{ animation: 'fadeSlideUp 0.5s 0.21s ease both' }}
+              >
+                {[
+                  'No account required',
+                  'Static codes never expire',
+                  'PNG · SVG · JPG',
+                  '12 QR types',
+                ].map((text) => (
+                  <div key={text} className="flex items-center gap-1.5 text-sm font-medium" style={{ color: '#374151' }}>
+                    <span className="text-teal-600 font-bold text-xs">✓</span>
+                    {text}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ── QR demo card ── */}
+            <div
+              className="flex-shrink-0"
+              style={{ animation: 'fadeScaleIn 0.55s 0.15s ease both' }}
+            >
+              <div
+                className="relative rounded-3xl p-5 bg-white"
+                style={{
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.10), 0 0 0 1px rgba(0,0,0,0.05)',
+                }}
+              >
+                {/* Subtle teal halo behind the QR */}
+                <div
+                  className="absolute inset-0 rounded-3xl pointer-events-none"
+                  style={{
+                    background: 'radial-gradient(ellipse at 60% 40%, rgba(13,148,136,0.08) 0%, transparent 70%)',
+                  }}
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/hero-qr.png"
+                  alt="TrueQR demo — scan to visit trueqr.app"
+                  width={180}
+                  height={180}
+                  className="relative block rounded-xl"
+                  style={{ imageRendering: 'pixelated' }}
+                />
+                <p className="mt-3 text-center text-[11px] font-medium tracking-wide" style={{ color: '#6b7280' }}>
+                  Scan me → trueqr.app
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
+      </div>
 
-        {/* QR Builder — the main event */}
-        <QRBuilder />
+      {/* ── BUILDER SECTION ── */}
+      <div className="bg-apple-gray">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8 pt-12 pb-24">
+          <QRBuilder />
+        </div>
       </div>
 
     </div>

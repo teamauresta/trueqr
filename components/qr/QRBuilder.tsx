@@ -1,6 +1,11 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import {
+  Globe, AlignLeft, Wifi, Mail, MessageSquare, Phone,
+  User, MapPin, MessageCircle, Star, CreditCard, CalendarDays,
+} from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { QRPreview } from './QRPreview'
 import { QRCustomiser } from './QRCustomiser'
 import { QRDownload } from './QRDownload'
@@ -59,19 +64,19 @@ const DEFAULT_DATA: Record<QRType, QRTypeData> = {
 
 const QR_TYPES = Object.keys(QR_TYPE_LABELS) as QRType[]
 
-const QR_TYPE_ICONS: Record<QRType, string> = {
-  url: '🔗',
-  text: '📝',
-  wifi: '📶',
-  email: '✉️',
-  sms: '💬',
-  phone: '📞',
-  vcard: '👤',
-  location: '📍',
-  whatsapp: '💬',
-  googlereview: '⭐',
-  payid: '💳',
-  calendar: '📅',
+const QR_TYPE_ICONS: Record<QRType, LucideIcon> = {
+  url: Globe,
+  text: AlignLeft,
+  wifi: Wifi,
+  email: Mail,
+  sms: MessageSquare,
+  phone: Phone,
+  vcard: User,
+  location: MapPin,
+  whatsapp: MessageCircle,
+  googlereview: Star,
+  payid: CreditCard,
+  calendar: CalendarDays,
 }
 
 export function QRBuilder() {
@@ -121,33 +126,31 @@ export function QRBuilder() {
       {/* ── LEFT PANEL ── */}
       <div className="space-y-4">
 
-        {/* Apple segmented control — type selector */}
-        <div className="apple-card p-2">
+        {/* QR type grid — 4 columns, clean icon grid */}
+        <div className="apple-card p-3">
           <div
-            className="flex flex-wrap gap-1"
+            className="grid grid-cols-4 sm:grid-cols-6 gap-1.5"
             role="tablist"
             aria-label="QR code type"
           >
             {QR_TYPES.map((type) => {
               const active = state.type === type
+              const Icon = QR_TYPE_ICONS[type]
               return (
                 <button
                   key={type}
                   role="tab"
                   aria-selected={active}
                   onClick={() => handleTypeChange(type)}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-[13px] font-medium
-                    transition-all duration-150 ease-out cursor-pointer
+                  className={`flex flex-col items-center justify-center gap-1.5 px-2 py-3 rounded-xl
+                    text-[11px] font-medium transition-all duration-150 ease-out cursor-pointer
                     ${active
-                      ? 'bg-white text-apple-black'
-                      : 'text-apple-secondary hover:text-apple-black hover:bg-black/[0.04]'
+                      ? 'bg-teal-600 text-white shadow-sm'
+                      : 'text-apple-secondary hover:text-apple-black hover:bg-black/[0.06] bg-black/[0.02]'
                     }`}
-                  style={active ? {
-                    boxShadow: '0 1px 4px rgba(0,0,0,0.1), 0 0 0 0.5px rgba(0,0,0,0.06)',
-                  } : {}}
                 >
-                  <span className="text-sm leading-none">{QR_TYPE_ICONS[type]}</span>
-                  {QR_TYPE_LABELS[type]}
+                  <Icon className={`h-[18px] w-[18px] ${active ? 'text-white' : 'text-apple-secondary'}`} strokeWidth={1.75} />
+                  <span className="leading-tight text-center">{QR_TYPE_LABELS[type]}</span>
                 </button>
               )
             })}
