@@ -61,11 +61,11 @@ export default function TermsPage() {
         {SITE_CONFIG.supportUrl && (
           <>
             <section>
-              <h2 className="text-base font-semibold text-slate-900 mb-2">Optional donations</h2>
+              <h2 className="text-base font-semibold text-slate-900 mb-2">Buy us a coffee</h2>
               <p className="leading-relaxed">
-                Any donations made via this site are entirely voluntary. They are not purchases of
-                goods or services, carry no refund obligation, and do not entitle you to any
-                additional features or support.
+                If you find TrueQR useful, you can buy us a coffee — that&apos;s genuinely all it is.
+                It&apos;s entirely voluntary, carries no refund obligation, and does not entitle you
+                to any additional features or support. Just a coffee. Nothing more.
               </p>
             </section>
             <div className="h-px bg-black/[0.05]" />

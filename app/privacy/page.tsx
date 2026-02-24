@@ -63,7 +63,7 @@ export default function PrivacyPage() {
             {SITE_CONFIG.supportUrl && (
               <li className="flex gap-2">
                 <span className="text-slate-400 mt-0.5">→</span>
-                <span><strong>Payment processor:</strong> If you choose to make an optional donation, your payment is handled by a third-party payment processor. {SITE_CONFIG.name} never receives your payment details.</span>
+                <span><strong>Coffee payments:</strong> If you choose to buy us a coffee, payment is handled by a third-party payment processor. {SITE_CONFIG.name} never receives your payment details.</span>
               </li>
             )}
           </ul>

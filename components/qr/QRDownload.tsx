@@ -140,12 +140,12 @@ export function QRDownload({ state, dataURL }: Props) {
             ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.05)'
           }}
         >
-          <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-150 flex-shrink-0">♥</span>
+          <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-150 flex-shrink-0">☕</span>
           <div className="flex-1 min-w-0">
             <p className="text-[12px] font-medium text-apple-secondary group-hover:text-teal-700 transition-colors duration-150">
-              Finding this useful?
+              Buy us a coffee?
             </p>
-            <p className="text-[11px] text-apple-tertiary">Support the project — entirely optional</p>
+            <p className="text-[11px] text-apple-tertiary">Totally optional — just a coffee, nothing more</p>
           </div>
           <span className="text-[11px] text-apple-tertiary group-hover:text-teal-600 transition-colors duration-150 flex-shrink-0">→</span>
         </a>

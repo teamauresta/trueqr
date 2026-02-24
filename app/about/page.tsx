@@ -108,15 +108,16 @@ export default function AboutPage() {
         {/* Support link — only shown if supportUrl is configured */}
         {SITE_CONFIG.supportUrl && (
           <div className="pt-8 border-t border-black/[0.06]">
-            <p className="text-xs text-slate-500 mb-2">Want to support this project?</p>
+            <p className="text-xs text-slate-500 mb-2">Like what we built?</p>
             <a
               href={SITE_CONFIG.supportUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-teal-600 transition-colors duration-150"
+              className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-teal-600 transition-colors duration-150"
             >
-              <span className="underline underline-offset-2">Support {SITE_CONFIG.name}</span>
-              <span className="text-xs text-slate-300 ml-1">— totally optional</span>
+              <span>☕</span>
+              <span className="underline underline-offset-2">Buy us a coffee</span>
+              <span className="text-xs text-slate-400 ml-1">— that&apos;s all, nothing more</span>
             </a>
           </div>
         )}
