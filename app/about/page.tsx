@@ -42,14 +42,14 @@ export default function AboutPage() {
           </Badge>
         </div>
 
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-6">
+        <h1 className="text-4xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.025em' }}>
           Why we built {SITE_CONFIG.name}
         </h1>
 
         {/* The problem */}
         <div className="mb-10 rounded-2xl border border-amber-200 bg-amber-50/70 px-6 py-5 flex gap-3">
           <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
-          <div className="space-y-2 text-sm text-amber-800">
+          <div className="space-y-2 text-base text-amber-800">
             <p className="font-semibold">The dark pattern problem</p>
             <p>
               Most QR code generators use a clever trick: your QR code doesn&apos;t actually
@@ -63,13 +63,13 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <p className="text-lg text-slate-700 mb-6 leading-relaxed">
+        <p className="text-base text-slate-700 mb-6 leading-relaxed">
           {SITE_CONFIG.name} generates <strong>static QR codes</strong>. Your content is encoded
           directly into the QR image. There&apos;s no redirect, no tracking pixel, no server call
           when someone scans it. Once downloaded, the code works forever — with or without us.
         </p>
 
-        <p className="text-slate-600 mb-10 leading-relaxed">
+        <p className="text-base text-slate-600 mb-10 leading-relaxed">
           We built {SITE_CONFIG.name} to be the tool we wish existed: fast, honest, completely
           free, and open source — so the community can verify every claim we make.
         </p>
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-1">{title}</h3>
-                  <p className="text-sm text-slate-600">{description}</p>
+                  <p className="text-base text-slate-600">{description}</p>
                 </div>
               </CardContent>
             </Card>
