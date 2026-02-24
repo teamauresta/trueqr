@@ -143,9 +143,9 @@ export function QRDownload({ state, dataURL }: Props) {
           <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-150 flex-shrink-0">☕</span>
           <div className="flex-1 min-w-0">
             <p className="text-[12px] font-medium text-apple-secondary group-hover:text-teal-700 transition-colors duration-150">
-              Buy us a coffee?
+              Enjoying TrueQR? Shout us a coffee
             </p>
-            <p className="text-[11px] text-apple-tertiary">Totally optional — just a coffee, nothing more</p>
+            <p className="text-[11px] text-apple-tertiary">No pressure — but it means a lot</p>
           </div>
           <span className="text-[11px] text-apple-tertiary group-hover:text-teal-600 transition-colors duration-150 flex-shrink-0">→</span>
         </a>
