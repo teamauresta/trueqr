@@ -6,7 +6,7 @@ export default function TermsPage() {
 
       <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 mb-3">Legal</p>
       <h1 className="text-4xl font-extrabold text-slate-900 mb-2">Terms of Use</h1>
-      <p className="text-sm text-slate-400 mb-10">Last updated: February 2026</p>
+      <p className="text-sm text-slate-500 mb-10">Last updated: February 2026</p>
 
       <div className="space-y-8 text-sm text-slate-600">
 

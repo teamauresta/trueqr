@@ -6,7 +6,7 @@ export default function PrivacyPage() {
 
       <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 mb-3">Legal</p>
       <h1 className="text-4xl font-extrabold text-slate-900 mb-2">Privacy Policy</h1>
-      <p className="text-sm text-slate-400 mb-10">Last updated: February 2026</p>
+      <p className="text-sm text-slate-500 mb-10">Last updated: February 2026</p>
 
       <div className="prose prose-slate prose-sm max-w-none space-y-8">
 
@@ -26,15 +26,15 @@ export default function PrivacyPage() {
           <p className="text-slate-600 leading-relaxed mb-3">Almost nothing. Specifically:</p>
           <ul className="space-y-2 text-slate-600 text-sm">
             <li className="flex gap-2">
-              <span className="text-teal-500 font-bold mt-0.5">✓</span>
+              <span className="text-teal-600 font-bold mt-0.5">✓</span>
               <span><strong>QR code content:</strong> Processed entirely in your browser. Never sent to any server.</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-teal-500 font-bold mt-0.5">✓</span>
+              <span className="text-teal-600 font-bold mt-0.5">✓</span>
               <span><strong>No account data:</strong> {SITE_CONFIG.name} requires no signup, login, or personal information.</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-teal-500 font-bold mt-0.5">✓</span>
+              <span className="text-teal-600 font-bold mt-0.5">✓</span>
               <span><strong>Basic analytics:</strong> The hosting provider may collect anonymous page-view counts. No cookies, no fingerprinting, no personal data.</span>
             </li>
           </ul>

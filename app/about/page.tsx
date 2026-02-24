@@ -108,7 +108,7 @@ export default function AboutPage() {
         {/* Support link — only shown if supportUrl is configured */}
         {SITE_CONFIG.supportUrl && (
           <div className="pt-8 border-t border-black/[0.06]">
-            <p className="text-xs text-slate-400 mb-2">Want to support this project?</p>
+            <p className="text-xs text-slate-500 mb-2">Want to support this project?</p>
             <a
               href={SITE_CONFIG.supportUrl}
               target="_blank"
