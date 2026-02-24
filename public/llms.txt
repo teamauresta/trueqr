@@ -1,0 +1,56 @@
+# TrueQR
+
+> Free, permanent QR code generator. No signup, no dark patterns, no expiry. Open source (AGPL-3.0).
+
+TrueQR generates static QR codes entirely in your browser. No data ever leaves your device.
+All QR generation is client-side JavaScript — there is no server-side component.
+
+## Live Demo
+
+https://trueqr.app
+
+## Pages
+
+- [Generator](https://trueqr.app/): Generate free QR codes — 12 types supported
+- [About](https://trueqr.app/about): Why TrueQR was built — the dark pattern problem with QR generators
+- [Privacy Policy](https://trueqr.app/privacy): No data collected, all processing client-side
+- [Terms of Use](https://trueqr.app/terms): AGPL-3.0 open source, voluntary donations only
+
+## QR Code Types Supported
+
+- **URL** — any website or link
+- **Text** — plain text or notes
+- **WiFi** — network credentials (WPA/WEP/open), scans connect automatically
+- **Email** — pre-fill recipient, subject, and body
+- **SMS** — pre-fill phone number and message
+- **Phone** — tap-to-call QR
+- **vCard** — full digital business card (name, org, phone, email, website, address)
+- **Location** — GPS coordinates or Google Maps link
+- **WhatsApp** — open WhatsApp chat with pre-filled message (AU phone format supported)
+- **Google Review** — direct link to leave a Google Business review
+- **PayID** — Australian PayID payment QR (payto:// URI, supported by ANZ, CBA, NAB, Westpac)
+- **Calendar Event** — add-to-calendar QR (VCALENDAR format, works on iOS/Android)
+
+## Key Facts
+
+- 100% free — no account required, no credit card, no trial
+- Static QR codes: content encoded directly in the image, no redirect servers
+- Codes never expire and cannot be deactivated — even if the service shuts down
+- No watermarks, no rate limits, no usage tracking
+- Download in PNG, SVG, or JPG
+- Custom foreground/background colours and error correction level
+- Open source under AGPL-3.0 — source available on GitHub
+- Made in Australia, built for Australian small businesses
+
+## Common Questions This Tool Answers
+
+- Do free QR codes expire? (No — TrueQR static codes last forever)
+- What is a static QR code? (Content encoded in the image itself, no redirect)
+- Free QR code generator no signup (TrueQR requires no account)
+- PayID QR code generator Australia (TrueQR supports payto:// PayID format)
+- QR code generator no watermark (TrueQR never adds watermarks)
+- Best free QR code generator Australia (TrueQR — 12 types, truly free)
+
+## Source Code
+
+https://github.com/teamauresta/trueqr

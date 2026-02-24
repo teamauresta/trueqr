@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-apple-black antialiased bg-apple-gray;
+    font-feature-settings: 'cv01', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Apple-style scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c7c7cc; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #a8a8ad; }
+
+  /* Clean focus — only for keyboard */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 2px solid #0d9488;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Apple segmented control */
+  .segmented-control {
+    @apply flex items-center gap-1 rounded-xl bg-black/5 p-1;
+  }
+  .segmented-control-item {
+    @apply flex-1 rounded-lg px-3 py-1.5 text-sm font-medium text-apple-secondary
+           transition-all duration-150 ease-out cursor-pointer text-center whitespace-nowrap;
+  }
+  .segmented-control-item.active {
+    @apply bg-white text-apple-black shadow-sm;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1), 0 0 0 0.5px rgba(0,0,0,0.05);
+  }
+  .segmented-control-item:not(.active):hover {
+    @apply text-apple-black bg-black/5;
+  }
+
+  /* Apple-style input */
+  .apple-input {
+    @apply w-full rounded-xl border border-black/[0.08] bg-white px-4 py-3 text-sm
+           text-apple-black placeholder:text-apple-tertiary
+           transition-all duration-150;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .apple-input:focus {
+    @apply outline-none border-teal-500/60;
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.12), 0 1px 2px rgba(0,0,0,0.03);
+  }
+
+  /* Apple card */
+  .apple-card {
+    @apply rounded-2xl bg-white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  /* Apple button primary */
+  .apple-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           bg-teal-600 px-5 py-2.5 text-sm font-semibold text-white
+           transition-all duration-150 cursor-pointer;
+    box-shadow: 0 1px 4px rgba(13,148,136,0.3);
+  }
+  .apple-btn-primary:hover {
+    @apply bg-teal-700;
+    box-shadow: 0 4px 12px rgba(13,148,136,0.35);
+    transform: translateY(-0.5px);
+  }
+  .apple-btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(13,148,136,0.2);
+  }
+  .apple-btn-primary:disabled {
+    @apply opacity-40 cursor-not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Apple button secondary */
+  .apple-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           bg-black/[0.06] px-5 py-2.5 text-sm font-medium text-apple-black
+           transition-all duration-150 cursor-pointer;
+  }
+  .apple-btn-secondary:hover {
+    @apply bg-black/[0.1];
+    transform: translateY(-0.5px);
+  }
+  .apple-btn-secondary:active { transform: translateY(0); }
+  .apple-btn-secondary:disabled {
+    @apply opacity-40 cursor-not-allowed;
+    transform: none;
+  }
+
+  /* Section label */
+  .apple-label {
+    @apply text-[11px] font-semibold uppercase tracking-widest text-apple-tertiary mb-2 block;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
